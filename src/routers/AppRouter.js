@@ -3,10 +3,10 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
   } from "react-router-dom";
-import LoginScreen from '../components/LoginScreen';
-import RegistrerScreen from '../components/RegistrerScreen';
+import LoginScreen from '../components/auth/LoginScreen';
+import ReassignScreen from '../components/auth/ReassignScreen';
+import RegisterScreen from '../components/auth/RegisterScreen';
 import Footbar from '../components/ui/Footbar';
 import { Navbar } from '../components/ui/Navbar';
 
@@ -18,8 +18,8 @@ const AppRouter = () => {
                 <div className="container d-flex d-flex justify-content-center align-items-center flex-wrap p-5">                    
                     <Switch>
                         <Route exact path="/login" component={ LoginScreen } />
-                        <Route exact path="/registrer" component={ RegistrerScreen }/>
-                        {/* <Route exact path="/change" component={ LoginScreen } /> */}
+                        <Route exact path="/register" component={ RegisterScreen }/>
+                        <Route exact path="/reassign" component={ ReassignScreen } />
                         <Route  path="/" component={ LoginScreen } />
                     </Switch>
                 </div>

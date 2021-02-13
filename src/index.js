@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ComfecoApp from './ComfecoApp';
 
-import './index.css';
+import './styles/index.css';
 
 
 
