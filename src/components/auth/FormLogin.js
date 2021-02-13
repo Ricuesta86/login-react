@@ -1,11 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useForm from '../../hooks/useForm';
 
 const FormLogin = () => {
+
+ 
+  const [ formValue, handleInputChange ] = useForm({
+    email:'',
+    password:''
+  });
+
+  const { email,password } = formValue;
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(email,password);
+  }
+
+
   return (
-    <form>
-      <input type="text" name="mail" id="mail" className=""/>
-      <input type="text" name="password" id="password" />
+    <form onSubmit={ handleSubmit }>
+      <input type="text" 
+          name="email" 
+          id="email" 
+          className=""
+          value= { email }
+          onChange={ handleInputChange }
+          />
+      <input type="password" 
+          name="password"
+          id="password"
+          value={ password }
+          onChange={ handleInputChange }          
+          />
       <div className="row">
         <div className="col-6">
           <Link to="/reassign">¿Olvidaste tu contraseña?</Link>
