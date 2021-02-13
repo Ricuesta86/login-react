@@ -24,24 +24,28 @@ const FormRegister = () => {
         <input type="text" 
           name="nick" 
           id="nick"
+          placeholder ="Nick"
           value = { nick } 
           onChange={ handleInputChange }
         />            
         <input type="text" 
           name="email" 
           id="email" 
+          placeholder ="Correo electrónico"
           value={ email }
           onChange = { handleInputChange }
         />
         <input type="password" 
           name="password" 
           id="password" 
+          placeholder ="Contraceña"
           value={ password }
           onChange = { handleInputChange }
         />
         <input type="password" 
           name="passwordVerificar" 
           id="passwordVerificar" 
+          placeholder ="Verificar la Contraceña"
           value = { passwordVerificar }
           onChange ={ handleInputChange }
         />  

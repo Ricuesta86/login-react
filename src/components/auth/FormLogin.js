@@ -24,12 +24,14 @@ const FormLogin = () => {
           name="email" 
           id="email" 
           className=""
+          placeholder ="Correo electrónico"
           value= { email }
           onChange={ handleInputChange }
           />
       <input type="password" 
           name="password"
           id="password"
+          placeholder ="Contraceña"
           value={ password }
           onChange={ handleInputChange }          
           />
