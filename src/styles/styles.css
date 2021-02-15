@@ -32,8 +32,13 @@
 
   }
 
-  .active{
-    text-decoration: black;
+  .nav-form, .nav-form:hover{
+      text-decoration: none;
+  }
+
+  .active, .active:hover{
+    text-decoration: none;
+    border-bottom: 2px solid black;
   }
 
   .form-control {
