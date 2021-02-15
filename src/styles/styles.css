@@ -7,13 +7,13 @@
 
   
   
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+  /* .footer {
+    /* position: fixed; */
+    /* left: 0; */
+    /* bottom: 0;
     width: 100%;
     background-color: #c4c4c4;
-  }
+  } */ 
 
   .img-svg{
     margin: 10px;
@@ -43,4 +43,16 @@
 
   .form-control {
     border-radius: 10px;
+  }
+
+  .btn-secondary{
+    border-radius: 10px;
+  }
+
+  .app{
+    height: 700px;
+  }
+
+  .terminos{
+    font-size: 13px;
   }

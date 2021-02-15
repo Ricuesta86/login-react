@@ -15,7 +15,7 @@ const AppRouter = () => {
         <Router>
             <div>
             <Navbar />
-                <div className="container-md d-flex d-flex justify-content-center align-items-center flex-wrap p-2 p-md-4">                    
+                <div className="container-md d-flex d-flex justify-content-center align-items-center flex-wrap p-2 p-md-4 app">                    
                     <Switch>
                         <Route exact path="/login" component={ LoginScreen } />
                         <Route exact path="/register" component={ RegisterScreen }/>

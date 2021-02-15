@@ -3,7 +3,7 @@ import React from 'react';
 const Footbar = () => {
     return (
         <>
-            <footer className="bg-dark footer">
+            <footer className="bg-dark container-fluid">
                 <div className="row">
                     <div className="col-lg-4 col-sm-12 col-md-4 text-white text-center font-weight-bold py-2">Copyright ©2020</div>
                     <div className="col-lg-4 col-sm-12 col-md-4 text-white text-center font-weight-bold py-2">Developed by Team 51 Comfeco</div>
