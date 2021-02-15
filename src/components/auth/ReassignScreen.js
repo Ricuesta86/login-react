@@ -21,7 +21,8 @@ const ReassignScreen = () => {
 
 
     return (
-        <div className="card col-6 bg-secondary p-5">
+        <div className="card col-6 bg-dark p-5">
+            <h2>Reasignar contraceña</h2>
             <p>Te enviaremos un correo electrónico con un enlace privado para que reasignes tu contraceña. Este enlace sera valido por una hora.</p>
             <form onSubmit = { handleSubmit }>
                 <input type="text"

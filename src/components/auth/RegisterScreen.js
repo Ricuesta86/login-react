@@ -5,7 +5,7 @@ import OthersRegister from './OthersRegister';
 
 const RegistrerScreen = () => {
     return (
-        <div className="card col-6 bg-secondary p-5">
+        <div className="card col-6 bg-dark p-5">
             <NavForm />
             <FormRegister/>
             <OthersRegister/>     

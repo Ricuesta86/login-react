@@ -1,0 +1,41 @@
+
+  
+  .bg-dark{
+    background-color: #c4c4c4 !important;
+  }
+
+
+  
+  
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #c4c4c4;
+  }
+
+  .img-svg{
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+  }
+  .img-logo{
+    height: 52px;
+    width: 153px;
+  }
+
+
+  a.link, .link:hover{
+    /* text-decoration: none; */
+    color: white !important;
+
+  }
+
+  .active{
+    text-decoration: black;
+  }
+
+  .form-control {
+    border-radius: 10px;
+  }

@@ -4,7 +4,7 @@ const Footbar = () => {
     return (
         <>
             <footer className="bg-dark footer">
-                <div className="row ">
+                <div className="row .no-gutters">
                     <div className="col-4">Copyright ©2020</div>
                     <div className="col-4">Developed by Team 51 Comfeco</div>
                     <div className="col-4 d-flex justify-content-center">

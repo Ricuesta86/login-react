@@ -1,9 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux'; 
 import { Link } from 'react-router-dom';
+import { login } from '../../actions/auth';
 import useForm from '../../hooks/useForm';
 
 const FormLogin = () => {
 
+  const dispatch = useDispatch(); 
  
   const [ formValue, handleInputChange ] = useForm({
     email:'',
@@ -14,39 +17,46 @@ const FormLogin = () => {
 
   const handleSubmit=(e)=>{
     e.preventDefault();
-    console.log(email,password);
+    dispatch( login(123456,'Ricuesta'));
   }
 
 
   return (
     <form onSubmit={ handleSubmit }>
-      <input type="text" 
+      <div className="py-2">
+        <input type="text" 
           name="email" 
           id="email" 
-          className=""
+          className="form-control"
           placeholder ="Correo electrónico"
           value= { email }
           onChange={ handleInputChange }
-          />
-      <input type="password" 
+        />
+      </div>
+      <div className="py-2">
+              <input type="password" 
           name="password"
           id="password"
+          className="form-control"
           placeholder ="Contraceña"
           value={ password }
           onChange={ handleInputChange }          
           />
-      <div className="row">
-        <div className="col-6">
-          <Link to="/reassign">¿Olvidaste tu contraseña?</Link>
+      </div>
+
+      <div className="row py-3 text-sm-center text-md-center" >
+        <div className="col-sm-12 col-md-8 col-lg-6">
+          <Link to="/reassign" className="link">¿Olvidaste tu contraseña?</Link>
         </div>
-        <div className="col-6">
+        <div className="col-sm-12 col-md-8 col-lg-6 text-white ">
           <input type="checkbox" name="checkbox" id="checkbox" /> Mantenerme
           conectado.
         </div>
       </div>
-
-      <button className="btn btn-primary btn-block">Ingresar</button>
-      <p>También puedes iniciar con tus redes</p>
+      <div className="py-2">
+        <button className="btn btn-secondary btn-block py-2">Ingresar</button>
+      </div>
+      <p className="text-center py-2 text-white font-weight-bold">También puedes iniciar con tus redes</p>
     </form>
   );
 };
