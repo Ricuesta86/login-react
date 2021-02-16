@@ -1,4 +1,5 @@
 import React from 'react';
+import validator from 'validator';
 import useForm from '../../hooks/useForm';
 
 const FormRegister = () => {
@@ -15,9 +16,29 @@ const FormRegister = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log( nick, email, password, passwordVerificar );
+
+      if( isFormValid()){
+        console.log( "Formulario correcto" );
+      }
+
     }
 
+
+    const isFormValid = ()=>{
+
+      if( nick.trim().length < 3){
+        console.log('Se requiere el nick');
+        return false;
+      }else if(!validator.isEmail(email)){
+        console.log('El Email no es valido');
+        return false;
+      }else if(password!==passwordVerificar || password < 6){
+        console.log('La contraceña debe tener mas de 6 caracteres y considir con la otra.');
+        return false;
+      }
+
+      return true;
+    }
 
     return (
         <form onSubmit={ handleSubmit }>
