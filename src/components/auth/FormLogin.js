@@ -11,8 +11,8 @@ const FormLogin = () => {
   const {loading} = useSelector(state => state.ui)
  
   const [ formValue, handleInputChange ] = useForm({
-    email:'ricuesta1986@gmail.com',
-    password:'1234567'
+    email:'',
+    password:''
   });
 
   const { email,password } = formValue;
