@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux'; 
+import { useDispatch, useSelector } from 'react-redux'; 
 import { Link } from 'react-router-dom';
 import { startLoginEmailPassword } from '../../actions/auth';
 import useForm from '../../hooks/useForm';
@@ -7,6 +7,8 @@ import useForm from '../../hooks/useForm';
 const FormLogin = () => {
 
   const dispatch = useDispatch(); 
+
+  const {loading} = useSelector(state => state.ui)
  
   const [ formValue, handleInputChange ] = useForm({
     email:'ricuesta1986@gmail.com',
@@ -54,7 +56,7 @@ const FormLogin = () => {
         </div>
       </div>
       <div className="py-2">
-        <button className="btn btn-secondary btn-block py-2">Ingresar</button>
+        <button className="btn btn-secondary btn-block py-2" disabled={ loading }>Ingresar</button>
       </div>
       <p className="text-center py-2 text-white font-weight-bold">También puedes iniciar con tus redes</p>
     </form>
