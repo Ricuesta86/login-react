@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect, useState } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -35,7 +35,7 @@ const AppRouter = () => {
                 setIsLoggedIn(false);
             }
         })
-    }, [ dispatch ]);
+    }, [ dispatch, isLoggedIn ]);
 
 
     return (
